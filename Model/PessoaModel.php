@@ -1,6 +1,10 @@
 <?php
 
-class PessoaModel
+namespace App\Model;
+
+use App\Dao\PessoaDao;
+
+class PessoaModel 
 {
     
     public $id, $nome, $rg, $cpf;
