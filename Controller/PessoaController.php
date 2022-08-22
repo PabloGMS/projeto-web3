@@ -1,7 +1,10 @@
 <?php
 
+namespace App\Controller;
 
-class PessoaController 
+use App\Model\PessoaModel;
+
+  class PessoaController 
 {
     
     public static function index() 
