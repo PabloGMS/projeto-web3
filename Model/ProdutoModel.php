@@ -36,6 +36,6 @@ class ProdutoModel
         
         $dao = new ProdutoDAO();
 
-        $this->rows = $dao->getAllRows();
+        $this->rows = $dao->select();
     }
 }

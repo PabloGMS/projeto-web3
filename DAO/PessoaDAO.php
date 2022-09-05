@@ -62,6 +62,7 @@ class PessoaDAO
         $stmt->bindValue(8, $model->id);
         $stmt->execute();
     }
+    
     public function select()
     {
         $sql = "SELECT * FROM pessoa ";
