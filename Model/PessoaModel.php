@@ -40,6 +40,6 @@ class PessoaModel
       
         $dao = new PessoaDAO();
 
-        $this->rows = $dao->getAllRows();
+        $this->rows = $dao->select();
     }
 }
