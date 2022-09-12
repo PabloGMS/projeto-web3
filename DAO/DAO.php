@@ -8,6 +8,8 @@ abstract class DAO
     protected $conexao;
     public function _construct()
     {
-        $dns = "mysql:host=" . $_ENV['db']['host'] . ";dbname=" $_ENV[data]
+        $dsn = "mysql:host=" . $_ENV['db']['host'] . ";dbname=" $_ENV['db']['database'];
+
+        $this->conexao = new PDO($dns, $_ENV['db']['user'], $_ENV['db']['pass']);
     }
 }
