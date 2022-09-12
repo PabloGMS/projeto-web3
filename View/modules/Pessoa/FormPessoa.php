@@ -34,7 +34,7 @@
             <label for="endereco">Endereço:</label>
             <input name="endereco" id="endereco" type="text" />
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Salvar</button>
 
         </fieldset>
     </form>    
