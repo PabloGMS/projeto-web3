@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\DAO\DAO;
 use App\Dao\PessoaDao;
 
 class PessoaModel 
@@ -30,16 +31,29 @@ class PessoaModel
            
         }
     }
-
-  
+ 
     public function getAllRows()
-    {
-       
-        include 'DAO/PessoaDAO.php';
 
-      
-        $dao = new PessoaDAO();
+     {
+        $dao = new PessoaDao();
 
         $this->rows = $dao->select();
-    }
+     }
+
+     public function getById(int $id)
+
+     {
+        $dao = new PessoaDao();
+        $obj = $dao->selectById($id); 
+        return ($obj) ? $obj : new PessoaModel();
+     }
+
+     public function delete(int $id)
+
+     {
+        $dao = new PessoaDao();
+
+        $dao->delete($id);
+     }
+     
 }

@@ -15,9 +15,11 @@ class PessoaController extends Controller
         parent::render('Pessoa/ListaPessoa', $model);
     }
 
-  
     public static function form()
+    
     {
+        parent::IsAuthenticaded();
+
        $model = new PessoaModel();
 
        if (isset($_GET['id']))
